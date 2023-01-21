@@ -1,1 +1,1 @@
-# EmpowerHer
+# EmpowrHer
