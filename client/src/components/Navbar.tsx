@@ -17,7 +17,7 @@ function Navbar() {
                     </div>
 
                     <div className='flex items-center space-x-1'>
-                        <a href='#' className='py-2 px-3 bg-violet-300 hover:bg-violet-200 hover:text-gray-800 rounded'>Login</a>
+                        <a href='#' className='py-1 px-4 bg-violet-300 hover:bg-violet-200 hover:text-gray-800 rounded-full'>Login</a>
                     </div>
                 </div>
             </div>
