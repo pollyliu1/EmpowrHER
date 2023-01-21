@@ -1,19 +1,18 @@
 import React from 'react'
 
 import Navbar from './Navbar'
-import SignInButton from './SignInButton'
-import SignOutButton from './SignOutButton'
+import SignInButton1 from './SignInButton1'
+import SignOutButton1 from './SignOutButton1'
 
 function Jumbotron({ user }) {
   return (
     <>
-        <Navbar />
+        <Navbar user={user} />
         {user ? 
         (<>
         {user.displayName}
-        <SignOutButton />
         </> ) : 
-        <SignInButton /> }
+        <SignInButton1 /> }
     </>
   )
 }

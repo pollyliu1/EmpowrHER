@@ -1,6 +1,9 @@
 import React from 'react'
 
-function Navbar() {
+import SignInButton2 from './SignInButton2'
+import SignOutButton2 from './SignOutButton2'
+
+function Navbar({ user }) {
     return (
         <nav className='bg-gray-100'>
             <div className='max-w-6xl mx-auto'>
@@ -17,7 +20,7 @@ function Navbar() {
                     </div>
 
                     <div className='flex items-center space-x-1'>
-                        <a href='#' className='py-1 px-4 bg-violet-300 hover:bg-violet-200 hover:text-gray-800 rounded-full'>Login</a>
+                        {user ? <SignOutButton2 /> : <SignInButton2 />}
                     </div>
                 </div>
             </div>
