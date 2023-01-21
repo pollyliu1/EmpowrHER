@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <h1 className="font-bold underline">
-          Hello world!
+         SHEEEEEEEEEEEsh
         </h1>
         <div className={styles.description}>
           <p>
