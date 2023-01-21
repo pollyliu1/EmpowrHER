@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { auth } from "../serve/firebase";
+import { doc, addDoc, collection } from "firebase/firestore"; 
+import { auth, db } from "../serve/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import Heading from '@/components/Heading'
@@ -7,7 +8,23 @@ import Navbar from '@/components/Navbar'
 
 function make_post() {
   const [user, loading, error] = useAuthState(auth);
+  const [formData, setFormData] = useState({});
   if(!user) return "Not permitted";
+
+  const handleChange = async (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    console.log(formData)
+    setFormData({...formData, "uemail": auth.currentUser?.email, "fulfill_uemail":"false"});
+    // const res = await axios.post('/api/submit-form', formData)
+    // console.log(res.data)
+    await addDoc(collection(db, "posts"), formData);
+    alert("Congratulations! You have successfully submitted your empowerment.");
+    // window.location.href = '/posts';
+  }
 
   return (
     <>
@@ -29,21 +46,21 @@ function make_post() {
                 </div> */}
                 <div className="flex flex-col mb-4 md:w-full">
                     <label className="mb-2 uppercase font-bold text-grey-darkest" htmlFor="title">Title</label>
-                    <input className="border py-2 px-3 text-grey-darkest" type="text" name="title" id="title" />
+                    <input className="border py-2 px-3 text-grey-darkest" type="text" name="title" id="title" onChange={handleChange} />
                 </div>
                 <div className="flex flex-col mb-6 md:w-full">
                     <label className="mb-2 uppercase font-bold text-grey-darkest" htmlFor="skills-have">Own Skills</label>
-                    <input className="border py-2 px-3 text-grey-darkest" type="text" name="skills-have" id="skills-have" />
+                    <input className="border py-2 px-3 text-grey-darkest" type="text" name="skills_have" id="skills-have" onChange={handleChange} />
                 </div>
                 <div className="flex flex-col mb-6 md:w-full">
                     <label className="mb-2 uppercase font-bold text-grey-darkest" htmlFor="skills-wanted">Wanted Skills</label>
-                    <input className="border py-2 px-3 text-grey-darkest" type="text" name="skills-wanted" id="skills-wanted" />
+                    <input className="border py-2 px-3 text-grey-darkest" type="text" name="skills_want" id="skills-wanted" onChange={handleChange} />
                 </div>
                 <div className="flex flex-col mb-6 md:w-full">
                     <label className="mb-2 uppercase font-bold text-grey-darkest" htmlFor="description">Description</label>
-                    <textarea className="border py-2 px-3 text-grey-darkest" name="description" id="description" />
+                    <textarea className="border py-2 px-3 text-grey-darkest" name="description" id="description" onChange={handleChange} />
                 </div>
-                <button className="bg-red hover:bg-teal-dark text-black uppercase text-lg mx-auto p-4 rounded" type="submit">Submit Empowerment</button>
+                <button className="bg-red hover:bg-teal-dark text-black uppercase text-lg mx-auto p-4 rounded" onClick={handleSubmit}>Submit Empowerment</button>
                 </form>
             </div>
         </div>
