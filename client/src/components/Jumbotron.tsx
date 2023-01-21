@@ -8,11 +8,17 @@ function Jumbotron({ user }) {
   return (
     <>
         <Navbar user={user} />
+
+
+        <div className='bg-purple-200'>
         {user ? 
         (<>
         {user.displayName}
         </> ) : 
         <SignInButton1 /> }
+        
+        <h1>hi</h1>
+        </div>
     </>
   )
 }
