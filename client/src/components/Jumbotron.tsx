@@ -19,12 +19,12 @@ function Jumbotron({ user }) {
         <Navbar user={user} />
         <div className="justify-content h-screen">
           <section>
-            <div className="max-w-screen-lg bg-white shadow-2xl rounded-3xl mx-auto text-center py-12 mt-20 mb-100">
-              <h2 className="text-3xl leading-9 font-bold tracking-tight text-gray-800 sm:text-4xl sm:leading-10">
-                <span className="font-extrabold text-gray-800 text-3xl leading-9 tracking-tight sm:text-4xl sm:leading-10">
+            <div className="max-h-96  max-w-screen-lg bg-white shadow-2xl rounded-3xl mx-auto text-center py-12 mt-20 mb-100">
+              <h2 className="text-9xl leading-9 font-bold tracking-tight text-gray-800 sm:text-4xl sm:leading-10">
+                <span className="font-extrabold text-gray-800 text-9xl leading-9 tracking-tight sm:text-4xl sm:leading-10">
                   Empowr
                 </span>
-                <span className="font-extrabold text-3xl text-violet-500 leading-9 tracking-tight sm:text-4xl sm:leading-10">
+                <span className="font-extrabold text-9xl text-violet-500 leading-9 tracking-tight sm:text-4xl sm:leading-10">
                   HER
                 </span>
               </h2>
@@ -36,7 +36,7 @@ function Jumbotron({ user }) {
             </div>
           </section>
 
-          <section style={{ padding: 432 }}>
+          <section style={{ padding: 450 }}>
             <div>
               <Image
                 src={separator}
@@ -56,7 +56,7 @@ function Jumbotron({ user }) {
           </section>
 
           <section>
-            <div className="flex">
+            <div className="flex px-40">
               <div className="mx-auto">
                 <Image
                   src={infopic3}
