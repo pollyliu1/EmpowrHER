@@ -30,7 +30,7 @@ function Navbar({ user }) {
               <a href="/" className="hover:text-gray-600">Home</a>
             </div>
             <div>
-              <a href="#" className="hover:text-gray-600">About Us</a>
+              <a href="/#about-us" className="hover:text-gray-600">About Us</a>
             </div>
             <div>
               <a href="#" className="hover:text-gray-600">Testimonials</a>
