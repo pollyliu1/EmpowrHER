@@ -17,17 +17,13 @@ function Jumbotron({ user }) {
                 </h2>
                 <div className="mt-8 flex justify-center">
                     <div className="inline-flex rounded-md bg-blue-500 shadow">
-                        <a href="#" className="text-gray-200 font-bold py-2 px-6">
-                            Start
-                        </a>
+                        { user
+                        ? (<> {user.displayName} </>)
+                        : <SignInButton1 /> }
                     </div>
                 </div>
             </div>
-                <div>
-                    { user
-                    ? (<> {user.displayName} </>)
-                    : <SignInButton1 /> }
-                </div>
+                
 
                 <h1>hi</h1>
             </div>
