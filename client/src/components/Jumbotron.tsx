@@ -1,3 +1,4 @@
+import { url } from 'inspector'
 import React from 'react'
 
 import Navbar from './Navbar'
@@ -10,12 +11,11 @@ function Jumbotron({ user }) {
         <Navbar user={user} />
 
 
-        <div className='bg-purple-200'>
-        {user ? 
-        (<>
-        {user.displayName}
-        </> ) : 
-        <SignInButton1 /> }
+        <div className="bg-[url('../../public/jumbotron-gradient.jpg')]">
+            
+        {user
+        ? (<> {user.displayName} </> )
+        : <SignInButton1 /> }
         
         <h1>hi</h1>
         </div>
