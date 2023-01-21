@@ -72,7 +72,7 @@ function Jumbotron({ user }) {
             </div>
           </section>
 
-          <section id="about-us">
+          <section>
             <div className="flex">
               <div className="mx-auto">
                 <Image
@@ -107,8 +107,10 @@ function Jumbotron({ user }) {
             </div>
           </section>
 
-          <section style={{ padding: 100 }}>
+          <section style={{ padding: 100 }} id="about-us">
             <div className="max-w-2xl bg-indigo-200 shadow-2xl rounded-3xl mx-auto pt-100 py-10 px-10 md:w-full">
+              <h1 className="text-3xl text-center font-bold"> About Us</h1>
+              <br></br>
               <p>
                 "
                 <span className="font-bold">
@@ -142,7 +144,7 @@ function Jumbotron({ user }) {
             </div>
           </section>
           <section>
-            <h1 className="text-center text-3xl">The Team</h1>
+            <h1 className="text-center text-3xl" id="the-team">The Team</h1>
             <div className="grid grid-cols-2 gap-4">
               <div className="col-span-1 mx-20 flex bg-indigo-200 shadow-2xl rounded-3xl float-left mt-10 pt-100 py-10 px-10">
                 <h1>Richard Shuai</h1>
