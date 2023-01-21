@@ -53,10 +53,12 @@ function Posts({ posts }) {
         </div>
       </div>
         {/* {posts[0]["description"]} */}
-        <div className="flex padding-20px">
+        <div className="container my-12 mx-auto px-4 md:px-12">
+        <div className="flex flex-wrap -mx-1 lg:-mx-4x">
             {posts.length > 0 &&
                 posts.map((post: any, ind: number) => (
-                    <div key={ind} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md">
+                    <div  key={ind} className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+                    <div className="bg-white border border-gray-200 rounded-lg shadow-lg">
                         <div className="container" key={ind}>
                             <img className="rounded-t-lg mx-auto pt-5" src="favicon.ico" alt="" />
                             <div className="p-5">
@@ -67,9 +69,9 @@ function Posts({ posts }) {
                                 <button className="mb-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded-full">
                                     Skills Possessed
                                 </button>
-                                <span className="inline mb-3 font-normal text-gray-700 pl-4px">
+                                <span className="inline font-normal text-gray-700 pl-4px">
                                     &nbsp;{post["skills_have"]}
-                                </span>
+                                </span> <br />
                                 <button className="mb-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded-full">
                                     Skills Wanted
                                 </button>
@@ -83,15 +85,22 @@ function Posts({ posts }) {
                                     Requester: {post["uemail"].substring(0,post["uemail"].length-10)}
                                 </p>
                                 <p className="mb-3 font-normal text-gray-700">
-                                    {post["fulfill_uemail"] == "false"
+                                    {post["fulfill_uemail"] === "false"
                                         ? <b>Await empowerment</b>
                                         : "Empowered by " + post["fulfill_uemail"].substring(0,post["fulfill_uemail"].length-10)}
                                 </p>
+                                {post["fulfill_uemail"] === "false" &&
+                                <div className="mx-auto text-center my-5">
+                                    <button className='py-1 px-4 bg-violet-300 hover:bg-violet-200 hover:text-gray-800 rounded-lg' onClick={() => false}> Fulfill Empowerment </button>
+                                </div>
+                                }
                             </div>
                         </div>
                     </div>
+                    </div>
                 ))}
         </div>
+    </div>
     </div>
     </>
   );
