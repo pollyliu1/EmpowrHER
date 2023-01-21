@@ -10,7 +10,8 @@ function Jumbotron({ user }) {
         <>
             <div className="bg-[url('../../public/jumbotron-gradient.png')] bg-cover h-screen">
                 <Navbar user={user} />
-                <div className="max-w-screen-lg bg-white shadow-2xl rounded-lg mx-auto text-center py-12">
+                <div className="justify-content h-screen">
+                <div className="max-w-screen-lg bg-white shadow-2xl rounded-3xl mx-auto text-center py-12 mt-20">
                     <h2 className="text-3xl leading-9 font-bold tracking-tight text-gray-800 sm:text-4xl sm:leading-10">
                         <span className="font-extrabold text-grey-800 text-3xl leading-9 tracking-tight sm:text-4xl sm:leading-10">
                         Empowr
@@ -26,6 +27,7 @@ function Jumbotron({ user }) {
                             : <SignInButton1 /> }
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </>
