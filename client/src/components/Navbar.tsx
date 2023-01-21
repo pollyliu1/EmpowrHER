@@ -19,8 +19,12 @@ function Navbar({ user }) {
                         </div>
                     </div>
 
-                    <div className='flex items-center space-x-1'>
-                        {user ? <SignOutButton2 /> : <SignInButton2 />}
+                    <div className='flex items-center space-x-12'>
+                        <div><a>Home</a></div>
+                        <div><a>About Us</a></div>
+                        <div><a>Testimonials</a></div>
+                        <div><a>Team</a></div>
+                        <div>{user ? <SignOutButton2 /> : <SignInButton2 />}</div>
                     </div>
                 </div>
             </div>
