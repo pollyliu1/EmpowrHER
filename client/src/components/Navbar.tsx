@@ -11,7 +11,7 @@ function Navbar({ user }) {
           <div className="flex space-x-4">
             <div>
               <a
-                href="#"
+                href="/"
                 className="flex item-center py-6 px-3 text-gray-700 hover:text-gray-600"
               >
                 <span className="font-extrabold text-gray-900 text-3xl">
