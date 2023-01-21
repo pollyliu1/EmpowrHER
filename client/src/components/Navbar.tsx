@@ -5,7 +5,7 @@ import SignOutButton2 from "./SignOutButton2";
 
 function Navbar({ user }) {
   return (
-    <nav className="bg-violet-200 bg-opacity-30 backdrop-filter backdrop-blur-lg mt-0 fixed w-full z-10 top-0">
+    <nav className="bg-violet-200 bg-opacity-30 backdrop-filter backdrop-blur-lg sticky top-0 z-10 mt-0 w-full">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between">
           <div className="flex space-x-4">
