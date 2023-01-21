@@ -37,7 +37,8 @@ function Jumbotron({ user }) {
                                         <a href="/make_post" className="bg-indigo-500 text-white text-lg px-6 py-3 rounded-lg hover:bg-indigo-600">Request Empowerment</a>
                                     </>
                                     :
-                                    <SignInButton1 />}
+                                    <SignInButton1 />
+                                }
                             </div>
                         </div>
                     </section>
