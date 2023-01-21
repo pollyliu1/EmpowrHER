@@ -47,7 +47,7 @@ function Jumbotron({ user }) {
                     </p>
 
                 </div>
-                </div>
+            </div>
         </>
     )
 }
