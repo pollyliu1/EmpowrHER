@@ -28,6 +28,24 @@ function Jumbotron({ user }) {
                         </div>
                     </div>
                 </div>
+                <div className='max-w-screen-sm bg-indigo-200 shadow-2xl rounded-3xl mx-auto py-10 px-10 mt-40 '>
+                    <p>
+                        EmpowerHER is a web application designed to connect and empower women by sharing skills and knowledge.
+                    </p>
+                    <br></br>
+                    <p>
+                        Our platform allows users to create profiles, <span className='font-bold'>share</span> their skills and expertise,
+                        and <span className='font-bold'>connect</span> with other women in their community or industry. Whether you're a seasoned
+                        professional or just starting out, our goal is to provide a<span className='font-bold'> safe and inclusive space </span>
+                        for women to share their skills and support one another.
+                    </p>
+                    <br></br>
+                    <p>
+                        EmpowerHER is the ultimate tool for women looking to grow their skill-sets and hobbies. Join our  
+                        <span className='font-bold'> community </span> today and start sharing your skills to empower yourself and others.
+                    </p>
+
+                </div>
                 </div>
             </div>
         </>
