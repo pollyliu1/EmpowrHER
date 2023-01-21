@@ -41,16 +41,16 @@ function Navbar({ user }) {
 
           <div className="flex items-center space-x-12">
             <div>
-              <a href="#">Home</a>
+              <a href="#" className="hover:text-gray-600">Home</a>
             </div>
             <div>
-              <a href="#">About Us</a>
+              <a href="#" className="hover:text-gray-600">About Us</a>
             </div>
             <div>
-              <a href="#">Testimonials</a>
+              <a href="#" className="hover:text-gray-600">Testimonials</a>
             </div>
             <div>
-              <a href="#">Team</a>
+              <a href="#" className="hover:text-gray-600">Team</a>
             </div>
             <div>{user ? <SignOutButton2 /> : <SignInButton2 />}</div>
           </div>
