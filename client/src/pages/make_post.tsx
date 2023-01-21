@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import Router from 'next/router';
 import { doc, addDoc, collection } from "firebase/firestore"; 
 import { auth, db } from "../serve/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -8,7 +9,12 @@ import Navbar from '@/components/Navbar'
 
 function make_post() {
   const [user, loading, error] = useAuthState(auth);
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({fulfill_uemail: "false"});
+
+  useEffect(() => {
+    setFormData({...formData, uemail: user?.email});
+  }, [user])
+
   if(!user) return "Not permitted";
 
   const handleChange = async (e) => {
@@ -17,13 +23,13 @@ function make_post() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(formData)
-    setFormData({...formData, "uemail": auth.currentUser?.email, "fulfill_uemail":"false"});
-    // const res = await axios.post('/api/submit-form', formData)
-    // console.log(res.data)
+
+    // Note that setState is async, that means if we immediately use the state, we make a useEffect
+    // console.log(formData)
+    
     await addDoc(collection(db, "posts"), formData);
     alert("Congratulations! You have successfully submitted your empowerment.");
-    // window.location.href = '/posts';
+    Router.push('/posts');
   }
 
   return (
