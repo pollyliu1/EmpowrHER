@@ -1,13 +1,21 @@
 import Head from 'next/head'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import { Inter, Junge } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+import { auth } from '../serve/firebase'
+import { useAuthState } from 'react-firebase-hooks/auth'
 
 import Jumbotron from '@/components/Jumbotron'
 
 const inter = Inter({ subsets: ['latin'] })
 
+
+
+
 export default function Home() {
+  const [ user, loading, error ] = useAuthState(auth); 
+
   return (
     <>
       <Head>
@@ -17,7 +25,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Jumbotron />
+        
+        {user ? <Jumbotron user={user} /> : <Jumbotron user={false} />}
       </main>
     </>
   )
