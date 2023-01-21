@@ -58,7 +58,7 @@ function make_post() {
                 </div>
                 <div className="flex flex-col mb-6 md:w-full">
                     <label className="mb-2 uppercase font-bold text-grey-darkest" htmlFor="description">Description</label>
-                    <textarea className="border py-2 px-3 text-grey-darkest" name="description" id="description" onChange={handleChange} />
+                    <textarea className="border py-2 px-3 text-grey-darkest max-h-40" name="description" id="description" onChange={handleChange} />
                 </div>
                 <button className="bg-red hover:bg-teal-dark text-black uppercase text-lg mx-auto p-4 rounded" onClick={handleSubmit}>Submit Empowerment</button>
                 </form>
