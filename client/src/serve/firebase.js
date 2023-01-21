@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { GoogleAuthProvider, signInWithPopup, getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, collection, query, orderBy, getDocs } from "firebase/firestore";
 
 const firebaseApp = initializeApp({
     apiKey: process.env["NEXT_PUBLIC_API_KEY"],
@@ -20,4 +20,10 @@ const googleSignIn = () => {
     signInWithPopup(auth, provider); // after sign in, auth variable is automatically changed to signed in
 };
 
-export { db, auth, googleSignIn }
+const getAllPostsSnapShot = async () => {
+    const q = query(collection(db, "posts"), orderBy('created_at', "desc"));
+    const querySnapshot = await getDocs(q);
+    return querySnapshot;
+}
+
+export { db, auth, googleSignIn, getAllPostsSnapShot }
