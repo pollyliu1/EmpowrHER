@@ -1,11 +1,17 @@
 import React from 'react'
 import Navbar from './Navbar'
 
-function Jumbotron() {
+import SignInButton from './SignInButton'
+import SignOutButton from './SignOutButton'
+
+function Jumbotron({ user }) {
   return (
     <>
-        <Navbar />
-        <button className="bg-indigo-500 text-white text-lg px-6 py-3 rounded-lg hover:bg-indigo-600">Button</button>
+        {user ? 
+        (<>
+        {user.displayName}
+        <SignOutButton />
+        </> ) : <SignInButton /> }
     </>
   )
 }
