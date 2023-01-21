@@ -48,7 +48,6 @@ function Jumbotron({ user }) {
 
                 </div>
                 </div>
-            </div>
         </>
     )
 }

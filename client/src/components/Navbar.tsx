@@ -27,7 +27,7 @@ function Navbar({ user }) {
 
           <div className="flex items-center space-x-12">
             <div>
-              <a href="#" className="hover:text-gray-600">Home</a>
+              <a href="/" className="hover:text-gray-600">Home</a>
             </div>
             <div>
               <a href="#" className="hover:text-gray-600">About Us</a>
