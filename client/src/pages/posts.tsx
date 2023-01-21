@@ -56,35 +56,36 @@ function Posts({ posts }) {
         <div className="flex padding-20px">
             {posts.length > 0 &&
                 posts.map((post: any, ind: number) => (
-                    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                    <div key={ind} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md">
                         <div className="container" key={ind}>
-                            <img className="rounded-t-lg" src="favicon.ico" alt="" />
+                            <img className="rounded-t-lg mx-auto pt-5" src="favicon.ico" alt="" />
                             <div className="p-5">
-                                <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    {post["pid"]} {post["title"]}
+                                <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                                    {/* {post["pid"]}  */}
+                                    {post["title"]}
                                 </h1>
-                                <button className="mb-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                                <button className="mb-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded-full">
                                     Skills Possessed
                                 </button>
-                                <span className="inline mb-3 font-normal text-gray-700 dark:text-gray-400 pl-4px">
+                                <span className="inline mb-3 font-normal text-gray-700 pl-4px">
                                     &nbsp;{post["skills_have"]}
                                 </span>
-                                <button className="mb-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                                <button className="mb-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded-full">
                                     Skills Wanted
                                 </button>
-                                <span className="inline mb-3 font-normal text-gray-700 dark:text-gray-400 pl-4px">
+                                <span className="inline mb-3 font-normal text-gray-700 pl-4px">
                                     &nbsp;{post["skills_want"]}
                                 </span>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                                    &nbsp;Requester: {post["uemail"]}
-                                </p>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                <p className="mb-3 font-normal text-gray-700">
                                     {post["description"]}
                                 </p>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                <p className="font-normal text-gray-700">
+                                    Requester: {post["uemail"].substring(0,post["uemail"].length-10)}
+                                </p>
+                                <p className="mb-3 font-normal text-gray-700">
                                     {post["fulfill_uemail"] == "false"
-                                        ? "Await empowerment"
-                                        : "Empowered by " + post["fulfill_uemail"]}
+                                        ? <b>Await empowerment</b>
+                                        : "Empowered by " + post["fulfill_uemail"].substring(0,post["fulfill_uemail"].length-10)}
                                 </p>
                             </div>
                         </div>
