@@ -7,6 +7,31 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import Heading from '@/components/Heading'
 import Navbar from '@/components/Navbar'
 
+
+// co:here
+const options = {
+    method: 'POST',
+    headers: {
+      accept: 'application/json',
+      'Cohere-Version': '2022-12-06',
+      'content-type': 'application/json',
+      authorization: 'Bearer gWDO3FVQmarym7A42rwl3oVreAs4ueo636Mgncets'
+    },
+    body: JSON.stringify({
+      max_tokens: 20,
+      return_likelihoods: 'NONE',
+      truncate: 'END',
+      prompt: 'Once upon a time in a magical land called'
+    })
+  };
+  
+  fetch('https://api.cohere.ai/generate', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+// End of co:here
+
+
 function make_post() {
   const [user, loading, error] = useAuthState(auth);
   const [formData, setFormData] = useState({fulfill_uemail: "false"});
