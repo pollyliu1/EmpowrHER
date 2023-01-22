@@ -33,9 +33,6 @@ function Navbar({ user }) {
               <a href="/#about-us" className="hover:text-gray-600">About Us</a>
             </div>
             <div>
-              <a href="#" className="hover:text-gray-600">Testimonials</a>
-            </div>
-            <div>
               <a href="/#the-team" className="hover:text-gray-600">Team</a>
             </div>
             <div>{user ? <SignOutButton2 /> : <SignInButton2 />}</div>
