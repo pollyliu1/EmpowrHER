@@ -23,6 +23,30 @@ export const getServerSideProps = async () => {
     };
 };
 
+// Using Google Search Image API:
+function GoogleImageSearch( post:any ) {
+    const [images, setImages] = useState([])
+  
+    useEffect(() => {
+      const fetchData = async () => {
+        const res = await fetch(
+            // `https://www.googleapis.com/customsearch/v1?q=flowers&imgSize=huge&imgType=photo&key=AIzaSyCRZtlZZLYLBfs5Tt7FRw4eI34qTiI5jCY&cx=6465296f03c924e3c:omuauf_lfve&q=${post["skills_want"].split(", ")[0]}`
+            `https://www.googleapis.com/customsearch/v1?key=AIzaSyCRZtlZZLYLBfs5Tt7FRw4eI34qTiI5jCY&cx=017576662512468239146:omuauf_lfve&q=${post["skills_want"].split(", ")[0]}&callback=hndlr`
+        )
+        const data = await res.json()
+        setImages(data.items)
+        console.log(data)
+        console.log(            `https://www.googleapis.com/customsearch/v1?q=flowers&imgSize=huge&imgType=photo&key=AIzaSyCRZtlZZLYLBfs5Tt7FRw4eI34qTiI5jCY&cx=6465296f03c924e3c:omuauf_lfve&q=${post["skills_want"].split(", ")[0]}`
+        )
+      }
+      fetchData()
+    }, [])
+  
+    return (
+        <img key={images.link} src={images.link} alt={images.title} className="rounded-t-lg mx-auto pt-5" />
+    )
+  }
+
 function Posts({ posts }) {
   const [user, loading, error] = useAuthState(auth);
 
@@ -86,7 +110,10 @@ function Posts({ posts }) {
                     <div  key={ind} className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" data-aos="slide-up">
                     <div className="bg-white border border-gray-200 rounded-lg shadow-lg">
                         <div className="container" key={ind}>
-                            <img className="rounded-t-lg mx-auto pt-5" src="favicon.ico" alt="" />
+
+                            {/* <img className="rounded-t-lg mx-auto pt-5" src="favicon.ico" alt="" /> */}
+                            {GoogleImageSearch(post)}
+
                             <div className="p-5">
                                 <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                                     {/* {post["pid"]}  */}
