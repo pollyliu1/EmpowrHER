@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { auth, db } from "../serve/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import Heading from "@/components/Heading";
 import Navbar from "@/components/Navbar";
@@ -48,6 +50,30 @@ function GoogleImageSearch( post:any ) {
 function Posts({ posts }) {
   const [user, loading, error] = useAuthState(auth);
 
+  useEffect(() => {
+    AOS.init({
+      // Global settings:
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: 'aos-init', // class applied after initialization
+      animatedClassName: 'aos-animate', // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 120, // the delay on throttle used while scrolling the page (advanced)
+      once: false,
+    
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      // offset: 10, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 800, // values from 0 to 3000, with step 50ms
+      easing: 'ease', // default easing for AOS animations
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    
+    })
+  }, []); 
+
   // useEffect(() => {
   //     const getPosts = async () => {
   //         const snapshot = await getAllPostsSnapShot();
@@ -62,7 +88,7 @@ function Posts({ posts }) {
     <div className="bg-[url('../../public/jumbotron-gradient.png')] bg-cover min-h-screen">
       <Heading />
       <Navbar user={user} />
-      <div className='max-w-lg mx-auto mt-10 mb-10 border-purple-800'>
+      <div className='max-w-lg mx-auto mt-10 mb-10 border-purple-800' data-aos="slide-down">
         <div className="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden ">
           <div className="grid place-items-center h-full w-12 text-indigo-500">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -81,7 +107,7 @@ function Posts({ posts }) {
         <div className="flex flex-wrap -mx-1 lg:-mx-4x">
             {posts.length > 0 &&
                 posts.map((post: any, ind: number) => (
-                    <div  key={ind} className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+                    <div  key={ind} className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" data-aos="slide-up">
                     <div className="bg-white border border-gray-200 rounded-lg shadow-lg">
                         <div className="container" key={ind}>
 

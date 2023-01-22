@@ -9,18 +9,18 @@ function Theteam() {
   return (
     <>
       <section id="the-team">
-        <h1 className="text-center text-3xl">The Team</h1>
+        <h1 className="text-center text-3xl" data-aos="slide-down"><b>The Team</b></h1>
         <div className="grid grid-cols-2 gap-4">
-          <div className="col-span-1 mx-20 flex bg-indigo-200 shadow-2xl rounded-3xl float-left mt-10 pt-100 py-10 px-10">
+          <div className="col-span-1 mx-20 flex bg-indigo-200 shadow-2xl rounded-3xl float-left mt-10 pt-100 py-10 px-10" data-aos="slide-down">
             <h1 className="text-center">Richard Shuai</h1>
           </div>
-          <div className="col-span-1 mx-20 flex bg-indigo-200 shadow-2xl rounded-3xl float-right mt-10 pt-100 py-10 px-10">
+          <div className="col-span-1 mx-20 flex bg-indigo-200 shadow-2xl rounded-3xl float-right mt-10 pt-100 py-10 px-10" data-aos="slide-down">
             <h1>Angela Xu</h1>
           </div>
-          <div className="col-span-1 mx-20 flex bg-indigo-200 shadow-2xl rounded-3xl float-right mt-10 pt-100 py-10 px-10">
+          <div className="col-span-1 mx-20 flex bg-indigo-200 shadow-2xl rounded-3xl float-right mt-10 pt-100 py-10 px-10" data-aos="slide-up">
             <h1>Polly Liu</h1>
           </div>
-          <div className="col-span-1 mx-20 flex bg-indigo-200 shadow-2xl rounded-3xl float-right mt-10 pt-100 py-10 px-10">
+          <div className="col-span-1 mx-20 flex bg-indigo-200 shadow-2xl rounded-3xl float-right mt-10 pt-100 py-10 px-10" data-aos="slide-up">
             <h1>Mitchel Shen</h1>
           </div>
         </div>
