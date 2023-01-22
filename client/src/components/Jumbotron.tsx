@@ -19,7 +19,7 @@ function Jumbotron({ user }) {
                 <div className="justify-content h-screen">
                     <section>
                         <div className="max-w-screen-lg bg-white shadow-2xl rounded-3xl mx-auto text-center py-40 mt-20 mb-100">
-                            <h2 className="text-7xl">
+                            <h2 className="text-7xl" data-aos="zoom-in">
                                 <span className="font-extrabold text-gray-800 text-7xl">
                                     Empowr
                                 </span>
