@@ -88,8 +88,8 @@ function Jumbotron({ user }) {
                 </div>
             </div>
 
-            <section style={{ paddingTop: 300 }} id="about-us">
-                <div className="max-w-2xl bg-indigo-200 shadow-2xl rounded-3xl mx-auto pt-100 py-10 px-10 md:w-full">
+            <section style={{ paddingTop: 300 }}>
+                <div className="max-w-2xl bg-indigo-200 shadow-2xl rounded-3xl mx-auto pt-100 py-10 px-10 md:w-full" id="about-us">
                     <h1 className="text-3xl text-center font-bold" data-aos="slide-down"> About Us</h1>
                     <br />
                     <p data-aos="slide-right">
