@@ -4,10 +4,10 @@ import Image from "next/image";
 import Navbar from "./Navbar";
 import SignInButton1 from "./SignInButton1";
 import SignOutButton1 from "./SignOutButton1";
-import orangMonke from "../resources/orangMonke.PNG";
-import pinkMonke from "../resources/pinkMonke.PNG";
-import purpMonke from "../resources/purpMonke.PNG";
-import cyanMonke from "../resources/cyanMonke.PNG";
+import orangMonke from "../resources/orangMonke.png";
+import pinkMonke from "../resources/pinkMonke.png";
+import purpMonke from "../resources/purpMonke.png";
+import cyanMonke from "../resources/cyanMonke.png";
 
 function Theteam() {
   return (
