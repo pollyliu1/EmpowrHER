@@ -5,9 +5,9 @@ import styles from "@/styles/Home.module.css";
 import { auth } from "../serve/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-
 import Heading from "@/components/Heading";
 import Jumbotron from "@/components/Jumbotron";
+import Theteam from "@/components/Theteam";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +19,9 @@ export default function Home() {
       <Heading />
       <main>
         {user ? <Jumbotron user={user} /> : <Jumbotron user={false} />}
+        <div className="">
+        <Theteam />
+        </div>
         
       </main>
     </>
