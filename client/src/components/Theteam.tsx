@@ -4,24 +4,63 @@ import Image from "next/image";
 import Navbar from "./Navbar";
 import SignInButton1 from "./SignInButton1";
 import SignOutButton1 from "./SignOutButton1";
+import orangMonke from "../resources/orangMonke.PNG";
+import pinkMonke from "../resources/pinkMonke.PNG";
+import purpMonke from "../resources/purpMonke.PNG";
+import cyanMonke from "../resources/cyanMonke.PNG";
 
 function Theteam() {
   return (
     <>
       <section id="the-team">
-        <h1 className="text-center text-3xl" data-aos="slide-down"><b>The Team</b></h1>
-        <div className="grid grid-cols-2 gap-4">
-          <div className="col-span-1 mx-20 flex bg-indigo-200 shadow-2xl rounded-3xl float-left mt-10 pt-100 py-10 px-10" data-aos="slide-down">
-            <h1 className="text-center">Richard Shuai</h1>
+        <h1 className="p-10 text-center text-3xl" data-aos="slide-down">
+          <b>The Team</b>
+        </h1>
+        <div className="flex grid grid-cols-2 gap-4 justify-center ">
+          <div
+            className="w-60 h-60 rounded-lg bg-indigo-100"
+            data-aos="slide-down"
+          >
+            <h1 className="pt-5 text-center font-bold">Richard Shuai</h1>
+            <Image
+              alt="Richard Shuai"
+              src={orangMonke}
+              className="w-48 h-48 mx-auto"
+            />
           </div>
-          <div className="col-span-1 mx-20 flex bg-indigo-200 shadow-2xl rounded-3xl float-right mt-10 pt-100 py-10 px-10" data-aos="slide-down">
-            <h1>Angela Xu</h1>
+
+          <div
+            className="w-60 h-60 rounded-lg bg-indigo-100"
+            data-aos="slide-down"
+          >
+            <h1 className="pt-5 text-center font-bold">Angela Xu</h1>
+            <Image
+              alt="Angela Xu"
+              src={cyanMonke}
+              className="w-48 h-48 mx-auto"
+            />
           </div>
-          <div className="col-span-1 mx-20 flex bg-indigo-200 shadow-2xl rounded-3xl float-right mt-10 pt-100 py-10 px-10" data-aos="slide-up">
-            <h1>Polly Liu</h1>
+          <div
+            className="w-60 h-60 rounded-lg bg-indigo-100"
+            data-aos="slide-up"
+          >
+            <h1 className="pt-5 text-center font-bold">Polly Liu</h1>
+            <Image
+              alt="Polly Liu"
+              src={pinkMonke}
+              className="w-48 h-48 mx-auto"
+            />
           </div>
-          <div className="col-span-1 mx-20 flex bg-indigo-200 shadow-2xl rounded-3xl float-right mt-10 pt-100 py-10 px-10" data-aos="slide-up">
-            <h1>Mitchel Shen</h1>
+          <div
+            className="w-60 h-60 rounded-lg bg-indigo-100"
+            data-aos="slide-up"
+          >
+            <h1 className="pt-5 text-center font-bold">Mitchel Shen</h1>
+            <Image
+              alt="Mitchel Shen"
+              src={purpMonke}
+              className="w-48 h-48 mx-auto"
+            />
           </div>
         </div>
       </section>
