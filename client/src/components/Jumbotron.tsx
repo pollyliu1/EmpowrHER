@@ -27,11 +27,11 @@ function Jumbotron({ user }) {
                                     HER
                                 </span>
                             </h2>
-                            <p className="pt-10 mx-auto">
+                            <p className="pt-10 mx-auto" data-aos="slide-up">
                                 Elevating women in STEM, <br />
                                 One connection at a time
                             </p>
-                            <div className="mt-8 flex justify-center mx-auto text-center">
+                            <div className="mt-8 flex justify-center mx-auto text-center" data-aos="slide-down">
                                 {user ? (
                                     <>
                                         <div className="inline-flex my-auto rounded-md bg-blue-500 shadow rounded-3xl px-5 py-5 text-white">
@@ -90,9 +90,9 @@ function Jumbotron({ user }) {
 
             <section style={{ paddingTop: 300 }}>
                 <div className="max-w-2xl bg-indigo-200 shadow-2xl rounded-3xl mx-auto pt-100 py-10 px-10 md:w-full">
-                    <h1 className="text-3xl text-center font-bold"> About Us</h1>
+                    <h1 className="text-3xl text-center font-bold" data-aos="slide-down"> About Us</h1>
                     <br />
-                    <p>
+                    <p data-aos="slide-right">
                         "
                         <span className="font-bold">
                             Empowr<span className="text-violet-500">HER</span>
@@ -101,7 +101,7 @@ function Jumbotron({ user }) {
                         sharing skills and knowledge.
                     </p>
                     <br></br>
-                    <p>
+                    <p data-aos="slide-left">
                         Our platform allows users to create profiles,{" "}
                         <span className="font-bold">share</span> their skills and expertise,
                         and <span className="font-bold">connect</span> with other women in
@@ -111,7 +111,7 @@ function Jumbotron({ user }) {
                         for women to share their skills and support one another.
                     </p>
                     <br></br>
-                    <p>
+                    <p data-aos="slide-right">
                         "
                         <span className="font-bold">
                             Empowr<span className="text-violet-500">HER</span>
@@ -126,7 +126,7 @@ function Jumbotron({ user }) {
 
             <section id="about-us">
                 <div className="flex p-40">
-                    <div className="mx-auto">
+                    <div className="mx-auto" data-aos="fade-left">
                         <Image
                             src={infopic3}
                             alt="info picture 3"
@@ -136,7 +136,7 @@ function Jumbotron({ user }) {
                             Teach
                         </p>
                     </div>
-                    <div className="mx-auto">
+                    <div className="mx-auto" data-aos="fade-down">
                         <Image
                             src={infopic2}
                             alt="info picture 2"
@@ -146,7 +146,7 @@ function Jumbotron({ user }) {
                             Support
                         </p>
                     </div>
-                    <div className="mx-auto">
+                    <div className="mx-auto" data-aos="fade-right">
                         <Image
                             src={infopic1}
                             alt="info picture 1"
