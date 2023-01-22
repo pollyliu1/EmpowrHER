@@ -63,6 +63,10 @@ function make_post() {
                     <input className="border py-2 px-3 text-grey-darkest" type="text" name="skills_want" id="skills-wanted" onChange={handleChange} />
                 </div>
                 <div className="flex flex-col mb-6 md:w-full">
+                    <label className="mb-2 uppercase font-bold text-grey-darkest" htmlFor="photo-url">Photo URL</label>
+                    <input className="border py-2 px-3 text-grey-darkest" type="text" name="photo_url" id="photo-url" onChange={handleChange} />
+                </div>
+                <div className="flex flex-col mb-6 md:w-full">
                     <label className="mb-2 uppercase font-bold text-grey-darkest" htmlFor="description">Description</label>
                     <textarea className="border py-2 px-3 text-grey-darkest max-h-40" name="description" id="description" onChange={handleChange} />
                 </div>
