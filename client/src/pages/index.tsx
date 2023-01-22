@@ -29,7 +29,7 @@ export default function Home() {
       debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
       throttleDelay: 120, // the delay on throttle used while scrolling the page (advanced)
       once: false,
-    
+
       // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
       // offset: 10, // offset (in px) from the original trigger point
       delay: 0, // values from 0 to 3000, with step 50ms
@@ -37,19 +37,24 @@ export default function Home() {
       easing: 'ease', // default easing for AOS animations
       mirror: false, // whether elements should animate out while scrolling past them
       anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-    
+
     })
-  }, []); 
+  }, []);
 
   return (
     <>
       <Heading />
+
       <main>
-        {user ? <Jumbotron user={user} /> : <Jumbotron user={false} />}
-        <div className="">
-        <Theteam />
+        <div className="wrapper">
+          {user ? <Jumbotron user={user} /> : <Jumbotron user={false} />}
         </div>
-        <Footer />
+        <div className="wrapper">
+          <Theteam />
+        </div>
+        <div className="wrapper">
+          <Footer />
+        </div>
       </main>
     </>
   );

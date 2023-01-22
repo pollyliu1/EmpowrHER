@@ -16,10 +16,10 @@ function Theteam() {
         <h1 className="p-10 text-center text-3xl" data-aos="slide-down">
           <b>The Team</b>
         </h1>
-        <div className="flex grid grid-cols-2 gap-4 justify-center ">
+        <div className="flex gap-20 justify-center ">
           <div
             className="w-60 h-60 rounded-lg bg-indigo-100"
-            data-aos="slide-down"
+            data-aos="slide-right"
           >
             <h1 className="pt-5 text-center font-bold">Richard Shuai</h1>
             <Image
@@ -31,7 +31,7 @@ function Theteam() {
 
           <div
             className="w-60 h-60 rounded-lg bg-indigo-100"
-            data-aos="slide-down"
+            data-aos="slide-right"
           >
             <h1 className="pt-5 text-center font-bold">Angela Xu</h1>
             <Image
@@ -42,7 +42,7 @@ function Theteam() {
           </div>
           <div
             className="w-60 h-60 rounded-lg bg-indigo-100"
-            data-aos="slide-up"
+            data-aos="slide-left"
           >
             <h1 className="pt-5 text-center font-bold">Polly Liu</h1>
             <Image
@@ -53,7 +53,7 @@ function Theteam() {
           </div>
           <div
             className="w-60 h-60 rounded-lg bg-indigo-100"
-            data-aos="slide-up"
+            data-aos="slide-left"
           >
             <h1 className="pt-5 text-center font-bold">Mitchel Shen</h1>
             <Image
