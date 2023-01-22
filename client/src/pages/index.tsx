@@ -10,6 +10,7 @@ import 'aos/dist/aos.css';
 import Heading from "@/components/Heading";
 import Jumbotron from "@/components/Jumbotron";
 import Theteam from "@/components/Theteam";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,7 +49,7 @@ export default function Home() {
         <div className="">
         <Theteam />
         </div>
-        
+        <Footer />
       </main>
     </>
   );
